@@ -2,6 +2,10 @@
 
 set -euo pipefail
 
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+source "${SCRIPT_DIR}/scripts/colors.sh"
+
 echo "${COLOR_RED}[INFO] Disabling timer..."
 sudo systemctl disable --now wakeup.timer || true
 
@@ -32,3 +36,6 @@ else
 fi
 
 echo "${COLOR_GREEN}Uninstallation completed.${NO_COLOR}"
+
+
+

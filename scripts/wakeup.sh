@@ -4,6 +4,10 @@ set -euo pipefail
 
 RTC_DEVICE="/sys/class/rtc/rtc0/wakealarm"
 
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+source "${SCRIPT_DIR}/colors.sh"
+
 # Clear any existing RTC wake alarm.
 echo "[INFO] Clearing existing wake alarm..."
 echo 0 > "$RTC_DEVICE"
