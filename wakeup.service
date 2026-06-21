@@ -1,0 +1,6 @@
+[Unit]
+Description=Configure RTC wakeup
+
+[Service]
+type=oneshot
+ExecStart=/usr/local/bin/wakeup.sh

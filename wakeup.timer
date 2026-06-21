@@ -1,0 +1,10 @@
+[Unit]
+Description=Run wakeup daily at 03:00
+
+[Timer]
+OnCalendar=03:00
+Persistent=true
+
+[Install]
+# enable timer
+WantedBy=timers.target
