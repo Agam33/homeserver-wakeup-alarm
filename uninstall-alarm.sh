@@ -13,7 +13,10 @@ echo "[INFO] Removing systemd symlinks..."
 sudo rm -f /etc/systemd/system/wakeup.service
 sudo rm -f /etc/systemd/system/wakeup.timer
 
-echo "[INFO] Removing wakeup.sh script..."
+echo "[INFO] Removing colors script..."
+sudo rm -f /usr/local/bin/colors.sh
+
+echo "[INFO] Removing wakeup script..."
 sudo rm -f /usr/local/bin/wakeup.sh
 
 echo "[INFO] Reloading systemd...${NO_COLOR}"
