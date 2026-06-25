@@ -3,8 +3,11 @@
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-
 source "${SCRIPT_DIR}/scripts/colors.sh"
+
+sudo install -m 644 \
+	"${SCRIPT_DIR}/scripts/colors.sh" \
+	/usr/local/bin/colors.sh
 
 echo "${COLOR_BLUE}[INFO] Installing Alarm...${NO_COLOR}"
 sudo install -m 755 \
